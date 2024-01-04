@@ -1,1 +1,1 @@
-0x00. Pascal's Triangle
+# Solutions to tasks on Pascal's Triangle
