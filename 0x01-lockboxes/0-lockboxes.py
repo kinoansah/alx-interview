@@ -1,20 +1,35 @@
 #!/usr/bin/python3
-"""method that determines if all the boxes can be opened"""
+"""
+lockboxes for interviews
+"""
+
 
 def canUnlockAll(boxes):
-
-    if (type(boxes) is not list):
+    """
+    Function to determine if all boxes can be open
+    """
+    # if exists boxes
+    if not boxes:
         return False
-
-    if (len(boxes) == 0):
+    # check if is a list
+    if type(boxes) is not list:
         return False
-
-    keys = [0]
-    for i in keys:
-        for j in boxes[i]:
-            if j not in keys and j != i and j < len(boxes) and j != 0:
-                keys.append(j)
-    if len(keys) == len(boxes):
-        return True
-    else:
-        return False
+    for box in boxes:
+        if type(box) is not list:
+            return False
+    # status of each box
+    status = [False for i in range(len(boxes))]
+    status[0] = True
+    # get the key from box 0 (default opened box)
+    keys = [key for key in boxes[0]]
+    # while exists boxes to open
+    while False in status:
+        newkeys = []
+        if len(keys) == 0:
+            return False
+        for key in keys:
+            if key < len(boxes) and not status[key]:
+                newkeys = newkeys + boxes[key]
+                status[key] = True
+        keys = newkeys
+    return True
