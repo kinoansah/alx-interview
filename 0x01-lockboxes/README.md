@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 0. Lockboxes
 mandatory
 You have n number of locked boxes in front of you. Each box is numbered sequentially from 0 to n - 1 and each box may contain keys to the other boxes.
@@ -11,3 +12,6 @@ You can assume all keys will be positive integers
 There can be keys that do not have boxes
 The first box boxes[0] is unlocked
 Return True if all boxes can be opened, else return False
+=======
+# Lockboxes
+>>>>>>> 7cb0b82201fd465a371cc2bab7e1c65987f65ffb
