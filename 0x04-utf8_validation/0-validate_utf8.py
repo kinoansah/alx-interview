@@ -1,4 +1,8 @@
-ding_set_bits(num):
+#!/usr/bin/python3
+"""UTF-8 Validation"""
+
+
+def get_leading_set_bits(num):
     """returns the number of leading set bits (1)"""
     set_bits = 0
     helper = 1 << 7
